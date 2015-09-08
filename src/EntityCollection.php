@@ -13,7 +13,7 @@ abstract class EntityCollection extends Collection {
 	 * @param  string  $key
 	 * @return mixed
 	 */
-	public function max($key)
+	public function max($key = null)
 	{
 		return $this->reduce(function($result, $item) use ($key)
 		{
@@ -28,7 +28,7 @@ abstract class EntityCollection extends Collection {
 	 * @param  string  $key
 	 * @return mixed
 	 */
-	public function min($key)
+	public function min($key = null)
 	{
 		return $this->reduce(function($result, $item) use ($key)
 		{
@@ -38,11 +38,23 @@ abstract class EntityCollection extends Collection {
 	}
 
 	/**
+     * Get an array with the values of a given key.
+     *
+     * @param  string  $value
+     * @param  string  $key
+     * @return static
+     */
+    public function pluck($value, $key = null)
+    {
+        return new static(Arr::pluck($this->items, $value, $key));
+    }
+
+	/**
 	 * Return only unique items from the collection.
 	 *
 	 * @return static
 	 */
-	public function unique()
+	public function unique($key = null)
 	{
 		$dictionary = $this->getDictionary();
 

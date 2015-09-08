@@ -1,7 +1,7 @@
 {
     "name": "analogue/support",
     "description": "Common shared classes for Analogue",
-    "keywords": ["orm", "datamapper", "laravel", 
+    "keywords": ["analogue", "datamapper", "laravel", 
     "entity", "mapper"],
     "homepage": "http://github.com/analogueorm/support",
     "license": "MIT",
@@ -17,9 +17,8 @@
         }
     },
     "require": {
-        "nesbot/carbon": "~1.0",
-        "illuminate/contracts": "5.0.*",
-        "illuminate/support": "5.0.*"
+        "php": ">=5.5.0",
+        "illuminate/support": "5.1.*"
     },
     "require-dev": {
         "phpunit/phpunit": "4.*"
