@@ -47,7 +47,7 @@ abstract class EntityCollection extends Collection {
      */
     public function pluck($value, $key = null)
     {
-        return new static(Arr::pluck($this->items, $value, $key));
+        return new Collection(Arr::pluck($this->items, $value, $key));
     }
 
 	/**
