@@ -4,6 +4,7 @@ namespace Analogue\Support;
 
 use InvalidArgumentException;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Arr;
 
 abstract class EntityCollection extends Collection {
 	
