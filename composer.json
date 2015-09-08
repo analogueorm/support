@@ -1,0 +1,34 @@
+{
+    "name": "analogue/support",
+    "description": "Common shared classes for Analogue",
+    "keywords": ["orm", "datamapper", "laravel", 
+    "entity", "mapper"],
+    "homepage": "http://github.com/analogueorm/support",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rémi Collin",
+            "email": "remi@plateau.io"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Analogue\\Support\\": "src/"
+        }
+    },
+    "require": {
+        "nesbot/carbon": "~1.0",
+        "illuminate/contracts": "5.0.*",
+        "illuminate/support": "5.0.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.*"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Analogue\\Support\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable":true
+}
